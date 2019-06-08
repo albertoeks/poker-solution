@@ -53,7 +53,7 @@ public class Hand {
         }
 
         //check for 2 pair
-        if (rank == 1) {
+        if (rank == 2) {
             for (int i = pairIndex + 2; i < 4; i++) {
                 if (cards.get(i).getValue().equals(cards.get(i + 1).getValue())) {
                     rank = 3;
