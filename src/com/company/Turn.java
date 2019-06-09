@@ -145,7 +145,7 @@ public class Turn {
                 } else if (p2.getCards().get(1).getValue().equals(p2.getCards().get(2).getValue()) &&
                         p2.getCards().get(3).getValue().equals(p2.getCards().get(4).getValue())) {
                     p2Pair1 = p2.getCards().get(1).getValue() + p2.getCards().get(2).getValue() ;
-                    p1Pair2 = p2.getCards().get(3).getValue() + p2.getCards().get(4).getValue();
+                    p2Pair2 = p2.getCards().get(3).getValue() + p2.getCards().get(4).getValue();
                     p2Remaining = p2.getCards().get(0).getValue();
                 }
                 if(p1Pair1 == p2Pair1 && p1Pair2 == p2Pair2){
@@ -153,6 +153,8 @@ public class Turn {
                 } else if(p1Pair1 == p2Pair1 && p1Pair2 != p2Pair2) {
                     return p1Pair2 > p2Pair2 ? Winner.P1 : Winner.P2;
                 } else if(p1Pair1 != p2Pair1 && p1Pair2 == p2Pair2){
+                    return p1Pair1 > p2Pair1 ? Winner.P1 : Winner.P2;
+                } else if(p1Pair1 != p2Pair1 && p1Pair2 != p2Pair2){
                     return p1Pair1 > p2Pair1 ? Winner.P1 : Winner.P2;
                 }
             } else if (p1.getRank() == 2 && p2.getRank() == 2) {
