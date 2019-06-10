@@ -1,8 +1,6 @@
 package com.company;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,8 +8,8 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        try (BufferedReader reader = new BufferedReader(
-                new InputStreamReader(System.in, Charset.defaultCharset()))) {
+        File file = new File("poker-hands.txt");
+        try (BufferedReader reader = new BufferedReader(new BufferedReader(new FileReader(file)))) {
             String line;
             List<Winner> winners = new ArrayList<>();
             while ((line = reader.readLine()) != null) {
