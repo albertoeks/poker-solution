@@ -13,9 +13,9 @@ This project is a poker game solution.
 $ git clone <project>
 $ cd <project>/out/artifacts/poker_solution_jar
 ```
-##### Can be use a text file or enter the data manually
+#### Can be use a text file or enter the data manually
 
-######1. To use text file:
+- To use text file:
 
 ```
 $ cat poker-hands.txt | java -jar poker-solution.jar
@@ -25,7 +25,7 @@ Player 1: [263] hands
 Player 2: [237] hands
 ```
 
-######2. To use data manually, type one or a set of hands:
+- To use data manually, type one or a set of hands:
 
 ```
 $ java -jar poker-solution.jar
