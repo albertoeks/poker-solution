@@ -1,22 +1,41 @@
 # poker-solution
 
-#### About
+## About
 This project is a poker game solution.
 
-#### Prerequisites
-Make sure you have Java installed.
+## Requirements
 
-Run the following command to confirm:
-```
-$ java -version
-java version "12.0.1" 2019-04-16
-Java(TM) SE Runtime Environment (build 12.0.1+12)
-Java HotSpot(TM) 64-Bit Server VM (build 12.0.1+12, mixed mode, sharing)
-```
+- Java 8
+- Junit 4 (/test)
 
-#### Usage
+## Usage
 ```
 $ git clone <project>
 $ cd <project>/out/artifacts/poker_solution_jar
-$ cat poker-hands.txt | java -jar poker-solution.jar
 ```
+##### Can be use a text file or enter the data manually
+
+######1. To use text file:
+
+```
+$ cat poker-hands.txt | java -jar poker-solution.jar
+
+Output:
+Player 1: [263] hands
+Player 2: [237] hands
+```
+
+######2. To use data manually, type one or a set of hands:
+
+```
+$ java -jar poker-solution.jar
+$ 7S KH 7D 3C 3S 8C 8S 2D 4H 5C
+$
+
+Output:
+Player 1: [1] hands
+Player 2: [0] hands
+```
+
+
+
