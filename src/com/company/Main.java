@@ -8,8 +8,8 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        File file = new File("poker-hands.txt");
-        try (BufferedReader reader = new BufferedReader(new BufferedReader(new FileReader(file)))) {
+        try (BufferedReader reader = new BufferedReader(
+                new InputStreamReader(System.in, Charset.defaultCharset()))) {
             String line;
             List<Winner> winners = new ArrayList<>();
             while ((line = reader.readLine()) != null) {
